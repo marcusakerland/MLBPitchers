@@ -1,0 +1,124 @@
+<?php 
+$header = '<h1>Top Pitchers in MLB History</h1>';
+echo $header;
+
+$warHeader = '<h1>Sorted By WAR</h1>';
+echo $warHeader;
+
+$warArray = array(
+		array('pitcher' => 'Roger Clemens', 'WAR' => '139.5'),
+		array('pitcher' => 'Walter Johnson', 'WAR' => '123.9'),
+		array('pitcher' => 'Greg Maddux', 'WAR' => '113.9'),
+		array('pitcher' => 'Randy Johnson', 'WAR' => '111.7'),
+		array('pitcher' => 'Nolan Ryan', 'WAR' => '106.6'),
+		array('pitcher' => 'Bert Blyleven', 'WAR' => '105.7'),
+		array('pitcher' => 'Gaylord Perry', 'WAR' => '104.6'),
+		array('pitcher' => 'Steve Carlton', 'WAR' => '103.2'),
+		array('pitcher' => 'Tom Seaver', 'WAR' => '98.1'),
+		array('pitcher' => 'Pete Alexander', 'WAR' => '98.0'),
+		array('pitcher' => 'Lefty Grove', 'WAR' => '94.5'),
+		array('pitcher' => 'Bob Gibson', 'WAR' => '91.6'),
+		array('pitcher' => 'Christy Mathewson', 'WAR' => '88.7'),
+		array('pitcher' => 'Fergie Jenkins', 'WAR' => '88.1'),
+		array('pitcher' => 'Pedro Martinez', 'WAR' => '87.1'),
+		array('pitcher' => 'Don Sutton', 'WAR' => '86.6'),
+		array('pitcher' => 'Curt Schilling', 'WAR' => '83.2'),
+		array('pitcher' => 'Mike Mussina', 'WAR' => '82.5'),
+		array('pitcher' => 'Phil Niekro', 'WAR' => '81.6'),
+		array('pitcher' => 'Warren Spahn', 'WAR' => '81.2'),
+		array('pitcher' => 'John Smoltz', 'WAR' => '78.7'),
+		array('pitcher' => 'Robin Roberts', 'WAR' => '78.3'),
+		array('pitcher' => 'Tommy John', 'WAR' => '75.5'),
+		array('pitcher' => 'Cy Young', 'WAR' => '73.7'),
+		array('pitcher' => 'Kevin Brown', 'WAR' => '73.5'),
+);
+
+echo "<table><tr><td>Pitcher</td><td>WAR</td></tr>";
+asort($warArray, 'WAR');
+foreach ($warArray as $team){
+	echo "<tr><td>".$team['pitcher']."</td><td>".$team['WAR']."</td></tr>";
+}
+echo "</table></div>";
+?>
+
+<?php
+$strikeoutHeader = '<h1>Sorted By Strikeouts</h1>';
+echo $strikeoutHeader;
+
+$strikeoutArray = array(
+		array('pitcher' => 'Nolan Ryan', 'Strikeouts' => '5714'),
+		array('pitcher' => 'Randy Johnson', 'Strikeouts' => '4875'),
+		array('pitcher' => 'Roger Clemens', 'Strikeouts' => '4672'),
+		array('pitcher' => 'Steve Carlton', 'Strikeouts' => '4136'),
+		array('pitcher' => 'Bert Blyleven', 'Strikeouts' => '3701'),
+		array('pitcher' => 'Tom Seaver', 'Strikeouts' => '3640'),
+		array('pitcher' => 'Don Sutton', 'Strikeouts' => '3574'),
+		array('pitcher' => 'Gaylord Perry', 'Strikeouts' => '3534'),
+		array('pitcher' => 'Walter Johnson', 'Strikeouts' => '3509'),
+		array('pitcher' => 'Greg Maddux', 'Strikeouts' => '3371'),
+		array('pitcher' => 'Phil Niekro', 'Strikeouts' => '3342'),
+		array('pitcher' => 'Fergie Jenkins', 'Strikeouts' => '3192'),
+		array('pitcher' => 'Pedro Martinez', 'Strikeouts' => '3154'),
+		array('pitcher' => 'Bob Gibson', 'Strikeouts' => '3117'),
+		array('pitcher' => 'Curt Schilling', 'Strikeouts' => '3116'),
+		array('pitcher' => 'John Smoltz', 'Strikeouts' => '3084'),
+		array('pitcher' => 'Mike Mussina', 'Strikeouts' => '2813'),
+		array('pitcher' => 'Warren Spahn', 'Strikeouts' => '2583'),
+		array('pitcher' => 'Christy Mathewson', 'Strikeouts' => '2502'),
+		array('pitcher' => 'Kevin Brown', 'Strikeouts' => '2397'),
+		array('pitcher' => 'Robin Roberts', 'Strikeouts' => '2357'),
+		array('pitcher' => 'Lefty Grove', 'Strikeouts' => '2266'),
+		array('pitcher' => 'Tommy John', 'Strikeouts' => '2245'),
+		array('pitcher' => 'Pete Alexander', 'Strikeouts' => '2198'),
+		array('pitcher' => 'Cy Young', 'Strikeouts' => '1678'),
+		
+);
+
+echo "<table><tr><td>Pitcher</td><td>Strikeouts</td></tr>";
+arsort($strikeoutArray, 'Strikeouts');
+foreach ($strikeoutArray as $team){
+	echo "<tr><td>".$team['pitcher']."</td><td>".$team['Strikeouts']."</td></tr>";
+}
+echo "</table></div>";
+?>
+
+<?php
+$eraHeader = '<h1>Sorted By ERA</h1>';
+echo $eraHeader;
+
+
+$eraArray = array(
+    array('pitcher' => 'Christy Mathewson', 'ERA' => '2.13'),
+		array('pitcher' => 'Walter Johnson', 'ERA' => '2.17'),
+		array('pitcher' => 'Cy Young', 'ERA' => '2.19'),
+		array('pitcher' => 'Pete Alexander', 'ERA' => '2.56'),
+		array('pitcher' => 'Tom Seaver', 'ERA' => '2.86'),
+		array('pitcher' => 'Bob Gibson', 'ERA' => '2.91'),
+		array('pitcher' => 'Pedro Martinez', 'ERA' => '2.93'),
+		array('pitcher' => 'Lefty Grove', 'ERA' => '3.06'),
+		array('pitcher' => 'Warren Spahn', 'ERA' => '3.09'),
+		array('pitcher' => 'Gaylord Perry', 'ERA' => '3.11'),
+		array('pitcher' => 'Roger Clemens', 'ERA' => '3.12'),
+		array('pitcher' => 'Greg Maddux', 'ERA' => '3.16'),
+		array('pitcher' => 'Nolan Ryan', 'ERA' => '3.19'),
+		array('pitcher' => 'Steve Carlton', 'ERA' => '3.22'),
+		array('pitcher' => 'Don Sutton', 'ERA' => '3.26'),
+		array('pitcher' => 'Kevin Brown', 'ERA' => '3.28'),
+		array('pitcher' => 'Randy Johnson', 'ERA' => '3.29'),
+		array('pitcher' => 'Bert Blyleven', 'ERA' => '3.31'),
+	  array('pitcher' => 'John Smoltz', 'ERA' => '3.33'),
+		array('pitcher' => 'Fergie Jenkins', 'ERA' => '3.34'),
+	  array('pitcher' => 'Tommy John', 'ERA' => '3.34'),
+	  array('pitcher' => 'Phil Niekro', 'ERA' => '3.35'),
+	  array('pitcher' => 'Robin Roberts', 'ERA' => '3.41'),
+		array('pitcher' => 'Curt Schilling', 'ERA' => '3.46'),
+		array('pitcher' => 'Mike Mussina', 'ERA' => '3.68'),
+);
+
+echo "<table><tr><td>Pitcher</td><td>ERA</td></tr>";
+asort($eraArray, 'ERA');
+foreach ($eraArray as $team){
+	echo "<tr><td>".$team['pitcher']."</td><td>".$team['ERA']."</td></tr>";
+}
+echo "</table></div>";
+?>
