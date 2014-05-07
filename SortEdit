@@ -1,0 +1,798 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Best Pitchers in MLB History</title>
+	<link type="text/css" rel="stylesheet" href="/css/demo.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="description">
+	<h1>Best Pitchers in MLB History</h1>
+	<p>Click in a cell to edit the data.<br/>Click on the table headers to sort the rows.</p>
+</div>
+<form action="/demos/tablegear/example2.php" method="post">
+	<fieldset>
+		<table id="tgTable">
+			<thead>
+				<tr>
+					<th class="edit">Edit Row</th>
+					<th class="id sortable primary_key auto_increment">
+						<span>Id</span>
+						<span class="carat"></span>
+					</th>
+					<th class="pitcher sortable">
+						<span>Pitcher</span>
+						<span class="carat"></span>
+					</th>
+					<th class="war sortable">
+						<span>WAR</span>
+						<span class="carat"></span>
+					</th>
+					<th class="strikeouts sortable">
+						<span>Strikeouts</span>
+						<span class="carat"></span>
+					</th>
+					<th class="era sortable">
+						<span>ERA</span>
+						<span class="carat"></span>
+					</th>
+					<th class="delete">Delete Row</th>
+				</tr>
+			</thead>
+			<tfoot></tfoot>
+			<tbody>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="01" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>01</span>
+					</td>
+					<td class="editable">
+						<span>Roger Clemens</span>
+						<input type="text" name="data[01][pitcher]" value="Roger Clemens" />
+					</td>
+					<td class="editable">
+						<span>139.5</span>
+						<input type="text" name="data[01][war]" value="139.5" />
+					</td>
+					<td class="editable">
+						<span>4672</span>
+						<input type="text" name="data[01][strikeouts]" value="4672" />
+					</td>
+					<td class="editable">
+						<span>3.12</span>
+						<input type="text" name="data[01][era]" value="3.12" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="01" id="delete01" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="02" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>02</span>
+					</td>
+					<td class="editable">
+						<span>Walter Johnson</span>
+						<input type="text" name="data[02][pitcher]" value="Walter Johnson" />
+					</td>
+					<td class="editable">
+						<span>123.9</span>
+						<input type="text" name="data[02][war]" value="123.9" />
+					</td>
+					<td class="editable">
+						<span>3509</span>
+						<input type="text" name="data[02][strikeouts]" value="3509" />
+					</td>
+					<td class="editable">
+						<span>2.17</span>
+						<input type="text" name="data[02][era]" value="2.17" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="02" id="delete02" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="03" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>03</span>
+					</td>
+					<td class="editable">
+						<span>Greg Maddux</span>
+						<input type="text" name="data[03][pitcher]" value="Greg Maddux" />
+					</td>
+					<td class="editable">
+						<span>113.9</span>
+						<input type="text" name="data[03][war]" value="113.9" />
+					</td>
+					<td class="editable">
+						<span>3371</span>
+						<input type="text" name="data[03][strikeouts]" value="3371" />
+					</td>
+					<td class="editable">
+						<span>3.16</span>
+						<input type="text" name="data[03][era]" value="3.16" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="03" id="delete03" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="04" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>04</span>
+					</td>
+					<td class="editable">
+						<span>Randy Johnson</span>
+						<input type="text" name="data[04][pitcher]" value="Randy Johnson" />
+					</td>
+					<td class="editable">
+						<span>111.7</span>
+						<input type="text" name="data[04][war]" value="111.7" />
+					</td>
+					<td class="editable">
+						<span>4875</span>
+						<input type="text" name="data[04][strikeouts]" value="4875" />
+					</td>
+					<td class="editable">
+						<span>3.29</span>
+						<input type="text" name="data[04][era]" value="3.29" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="04" id="delete04" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="05" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>05</span>
+					</td>
+					<td class="editable">
+						<span>Nolan Ryan</span>
+						<input type="text" name="data[05][pitcher]" value="Nolan Ryan" />
+					</td>
+					<td class="editable">
+						<span>106.6</span>
+						<input type="text" name="data[05][war]" value="106.6" />
+					</td>
+					<td class="editable">
+						<span>5714</span>
+						<input type="text" name="data[05][strikeouts]" value="5714" />
+					</td>
+					<td class="editable">
+						<span>3.19</span>
+						<input type="text" name="data[05][era]" value="3.19" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="05" id="delete05" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="06" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>06</span>
+					</td>
+					<td class="editable">
+						<span>Bert Blyleven</span>
+						<input type="text" name="data[06][pitcher]" value="Bert Blyleven" />
+					</td>
+					<td class="editable">
+						<span>105.7</span>
+						<input type="text" name="data[06][war]" value="105.7" />
+					</td>
+					<td class="editable">
+						<span>3701</span>
+						<input type="text" name="data[06][strikeouts]" value="3701" />
+					</td>
+					<td class="editable">
+						<span>3.31</span>
+						<input type="text" name="data[06][era]" value="3.31" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="06" id="delete06" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="07" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>07</span>
+					</td>
+					<td class="editable">
+						<span>Gaylord Perry</span>
+						<input type="text" name="data[07][pitcher]" value="Gaylord Perry" />
+					</td>
+					<td class="editable">
+						<span>104.6</span>
+						<input type="text" name="data[07][war]" value="104.6" />
+					</td>
+					<td class="editable">
+						<span>3534</span>
+						<input type="text" name="data[07][strikeouts]" value="3534" />
+					</td>
+					<td class="editable">
+						<span>3.11</span>
+						<input type="text" name="data[07][era]" value="3.11" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="07" id="delete07" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="08" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>08</span>
+					</td>
+					<td class="editable">
+						<span>Steve Carlton</span>
+						<input type="text" name="data[08][pitcher]" value="Steve Carlton" />
+					</td>
+					<td class="editable">
+						<span>103.2</span>
+						<input type="text" name="data[08][war]" value="103.2" />
+					</td>
+					<td class="editable">
+						<span>4136</span>
+						<input type="text" name="data[08][strikeouts]" value="4136" />
+					</td>
+					<td class="editable">
+						<span>3.22</span>
+						<input type="text" name="data[08][era]" value="3.22" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="08" id="delete08" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="09" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>09</span>
+					</td>
+					<td class="editable">
+						<span>Tom Seaver</span>
+						<input type="text" name="data[09][pitcher]" value="Tom Seaver" />
+					</td>
+					<td class="editable">
+						<span>98.1</span>
+						<input type="text" name="data[09][war]" value="98.1" />
+					</td>
+					<td class="editable">
+						<span>3640</span>
+						<input type="text" name="data[09][strikeouts]" value="3640" />
+					</td>
+					<td class="editable">
+						<span>2.86</span>
+						<input type="text" name="data[09][era]" value="2.86" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="09" id="delete09" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="10" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>10</span>
+					</td>
+					<td class="editable">
+						<span>Pete Alexander</span>
+						<input type="text" name="data[10][pitcher]" value="Pete Alexander" />
+					</td>
+					<td class="editable">
+						<span>98.0</span>
+						<input type="text" name="data[10][war]" value="98.0" />
+					</td>
+					<td class="editable">
+						<span>2198</span>
+						<input type="text" name="data[10][strikeouts]" value="2198" />
+					</td>
+					<td class="editable">
+						<span>2.56</span>
+						<input type="text" name="data[10][era]" value="2.56" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="10" id="delete10" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="11" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>11</span>
+					</td>
+					<td class="editable">
+						<span>Lefty Grove</span>
+						<input type="text" name="data[11][pitcher]" value="Lefty Grove" />
+					</td>
+					<td class="editable">
+						<span>94.5</span>
+						<input type="text" name="data[11][war]" value="94.5" />
+					</td>
+					<td class="editable">
+						<span>2266</span>
+						<input type="text" name="data[11][strikeouts]" value="2266" />
+					</td>
+					<td class="editable">
+						<span>3.06</span>
+						<input type="text" name="data[11][era]" value="3.06" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="11" id="delete11" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="12" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>12</span>
+					</td>
+					<td class="editable">
+						<span>Bob Gibson</span>
+						<input type="text" name="data[12][pitcher]" value="Bob Gibson" />
+					</td>
+					<td class="editable">
+						<span>91.6</span>
+						<input type="text" name="data[12][war]" value="91.6" />
+					</td>
+					<td class="editable">
+						<span>3117</span>
+						<input type="text" name="data[12][strikeouts]" value="3117" />
+					</td>
+					<td class="editable">
+						<span>2.91</span>
+						<input type="text" name="data[12][era]" value="2.91" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="12" id="delete12" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="13" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>13</span>
+					</td>
+					<td class="editable">
+						<span>Christy Mathewson</span>
+						<input type="text" name="data[13][pitcher]" value="Christy Mathewson" />
+					</td>
+					<td class="editable">
+						<span>88.7</span>
+						<input type="text" name="data[13][war]" value="88.7" />
+					</td>
+					<td class="editable">
+						<span>2502</span>
+						<input type="text" name="data[13][strikeouts]" value="2502" />
+					</td>
+					<td class="editable">
+						<span>2.13</span>
+						<input type="text" name="data[13][era]" value="2.13" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="13" id="delete13" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="14" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>14</span>
+					</td>
+					<td class="editable">
+						<span>Fergie Jenkins</span>
+						<input type="text" name="data[14][pitcher]" value="Fergie Jenkins" />
+					</td>
+					<td class="editable">
+						<span>88.1</span>
+						<input type="text" name="data[14][war]" value="88.1" />
+					</td>
+					<td class="editable">
+						<span>3192</span>
+						<input type="text" name="data[14][strikeouts]" value="3192" />
+					</td>
+					<td class="editable">
+						<span>3.34</span>
+						<input type="text" name="data[14][era]" value="3.34" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="14" id="delete14" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="15" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>15</span>
+					</td>
+					<td class="editable">
+						<span>Pedro Martinez</span>
+						<input type="text" name="data[15][pitcher]" value="Pedro Martinez" />
+					</td>
+					<td class="editable">
+						<span>87.1</span>
+						<input type="text" name="data[15][war]" value="87.1" />
+					</td>
+					<td class="editable">
+						<span>3154</span>
+						<input type="text" name="data[15][strikeouts]" value="3154" />
+					</td>
+					<td class="editable">
+						<span>2.93</span>
+						<input type="text" name="data[15][era]" value="2.93" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="15" id="delete15" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="16" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>16</span>
+					</td>
+					<td class="editable">
+						<span>Don Sutton</span>
+						<input type="text" name="data[16][pitcher]" value="Don Sutton" />
+					</td>
+					<td class="editable">
+						<span>86.6</span>
+						<input type="text" name="data[16][war]" value="86.6" />
+					</td>
+					<td class="editable">
+						<span>3574</span>
+						<input type="text" name="data[16][strikeouts]" value="3574" />
+					</td>
+					<td class="editable">
+						<span>3.26</span>
+						<input type="text" name="data[16][era]" value="3.26" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="16" id="delete16" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="17" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>17</span>
+					</td>
+					<td class="editable">
+						<span>Curt Schilling</span>
+						<input type="text" name="data[17][pitcher]" value="Curt Schilling" />
+					</td>
+					<td class="editable">
+						<span>83.2</span>
+						<input type="text" name="data[17][war]" value="83.2" />
+					</td>
+					<td class="editable">
+						<span>3116</span>
+						<input type="text" name="data[17][strikeouts]" value="3116" />
+					</td>
+					<td class="editable">
+						<span>3.46</span>
+						<input type="text" name="data[17][era]" value="3.46" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="17" id="delete17" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="18" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>18</span>
+					</td>
+					<td class="editable">
+						<span>Mike Mussina</span>
+						<input type="text" name="data[18][pitcher]" value="Mike Mussina" />
+					</td>
+					<td class="editable">
+						<span>82.5</span>
+						<input type="text" name="data[18][war]" value="82.5" />
+					</td>
+					<td class="editable">
+						<span>2813</span>
+						<input type="text" name="data[18][strikeouts]" value="2813" />
+					</td>
+					<td class="editable">
+						<span>3.68</span>
+						<input type="text" name="data[18][era]" value="3.68" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="18" id="delete18" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="19" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>19</span>
+					</td>
+					<td class="editable">
+						<span>Phil Niekro</span>
+						<input type="text" name="data[19][pitcher]" value="Phil Niekro" />
+					</td>
+					<td class="editable">
+						<span>81.6</span>
+						<input type="text" name="data[19][war]" value="81.6" />
+					</td>
+					<td class="editable">
+						<span>3342</span>
+						<input type="text" name="data[19][strikeouts]" value="3342" />
+					</td>
+					<td class="editable">
+						<span>3.35</span>
+						<input type="text" name="data[19][era]" value="3.35" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="19" id="delete19" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="20" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>20</span>
+					</td>
+					<td class="editable">
+						<span>Warren Spahn</span>
+						<input type="text" name="data[20][pitcher]" value="Warren Spahn" />
+					</td>
+					<td class="editable">
+						<span>81.2</span>
+						<input type="text" name="data[20][war]" value="81.2" />
+					</td>
+					<td class="editable">
+						<span>2583</span>
+						<input type="text" name="data[20][strikeouts]" value="2583" />
+					</td>
+					<td class="editable">
+						<span>3.09</span>
+						<input type="text" name="data[20][era]" value="3.09" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="20" id="delete20" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="21" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>21</span>
+					</td>
+					<td class="editable">
+						<span>John Smoltz</span>
+						<input type="text" name="data[21][pitcher]" value="John Smoltz" />
+					</td>
+					<td class="editable">
+						<span>78.7</span>
+						<input type="text" name="data[21][war]" value="78.7" />
+					</td>
+					<td class="editable">
+						<span>3084</span>
+						<input type="text" name="data[21][strikeouts]" value="3084" />
+					</td>
+					<td class="editable">
+						<span>3.33</span>
+						<input type="text" name="data[21][era]" value="3.33" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="21" id="delete21" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="22" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>22</span>
+					</td>
+					<td class="editable">
+						<span>Robin Roberts</span>
+						<input type="text" name="data[22][pitcher]" value="Robin Roberts" />
+					</td>
+					<td class="editable">
+						<span>78.3</span>
+						<input type="text" name="data[22][war]" value="78.3" />
+					</td>
+					<td class="editable">
+						<span>2357</span>
+						<input type="text" name="data[22][strikeouts]" value="2357" />
+					</td>
+					<td class="editable">
+						<span>3.41</span>
+						<input type="text" name="data[22][era]" value="3.41" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="22" id="delete22" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="23" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>23</span>
+					</td>
+					<td class="editable">
+						<span>Tommy John</span>
+						<input type="text" name="data[23][pitcher]" value="Tommy John" />
+					</td>
+					<td class="editable">
+						<span>75.5</span>
+						<input type="text" name="data[23][war]" value="75.5" />
+					</td>
+					<td class="editable">
+						<span>2245</span>
+						<input type="text" name="data[23][strikeouts]" value="2245" />
+					</td>
+					<td class="editable">
+						<span>3.34</span>
+						<input type="text" name="data[23][era]" value="3.34" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="23" id="delete23" />
+					</td>
+				</tr>
+				<tr class="even">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="24" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>24</span>
+					</td>
+					<td class="editable">
+						<span>Cy Young</span>
+						<input type="text" name="data[24][pitcher]" value="Cy Young" />
+					</td>
+					<td class="editable">
+						<span>73.7</span>
+						<input type="text" name="data[24][war]" value="73.7" />
+					</td>
+					<td class="editable">
+						<span>1678</span>
+						<input type="text" name="data[24][strikeouts]" value="1678" />
+					</td>
+					<td class="editable">
+						<span>2.19</span>
+						<input type="text" name="data[24][era]" value="2.19" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="24" id="delete24" />
+					</td>
+				</tr>
+				<tr class="odd">
+					<td class="edit">
+						<input type="checkbox" name="edit[]" value="25" />
+					</td>
+					<td class="primary_key auto_increment">
+						<span>25</span>
+					</td>
+					<td class="editable">
+						<span>Kevin Brown</span>
+						<input type="text" name="data[25][pitcher]" value="Kevin Brown" />
+					</td>
+					<td class="editable">
+						<span>73.5</span>
+						<input type="text" name="data[25][war]" value="73.5" />
+					</td>
+					<td class="editable">
+						<span>2397</span>
+						<input type="text" name="data[25][strikeouts]" value="2397" />
+					</td>
+					<td class="editable">
+						<span>3.28</span>
+						<input type="text" name="data[25][era]" value="3.28" />
+					</td>
+					<td class="delete">
+						<input type="checkbox" name="delete[]" value="25" id="delete25" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="hidden" name="fields[]" value="item" />
+		<input type="hidden" name="fields[]" value="description" />
+		<input type="hidden" name="fields[]" value="price" />
+		<input type="hidden" name="fields[]" value="quantity" />
+		<input type="hidden" name="noDataMessage" value="- No Data -" />
+		<input type="hidden" name="table" value="tgTable" />
+		<div class="submit">
+			<input type="submit" value="Update" />
+		</div>
+	</fieldset>
+</form>
+	<h3>New Row</h3>
+	<table>
+		<thead>
+			<tr>
+				<th class="edit">Edit Row</th>
+				<th class="id sortable primary_key auto_increment">
+					<span>Id</span>
+					<span class="carat"></span>
+				</th>
+				<th class="pitcher sortable">
+					<span>Pitcher</span>
+					<span class="carat"></span>
+				</th>
+				<th class="war sortable">
+					<span>WAR</span>
+					<span class="carat"></span>
+				</th>
+				<th class="strikeouts sortable">
+					<span>Strikeouts</span>
+					<span class="carat"></span>
+				</th>
+				<th class="era sortable">
+					<span>ERA</span>
+					<span class="carat"></span>
+				</th>
+				<th class="delete">Delete Row</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="newDataRow_tgTable" class="newRow even">
+				<td class="edit">
+					<input type="checkbox" name="edit[]" value="" />
+				</td>
+				<td class="primary_key auto_increment">
+					<span></span>
+				</td>
+				<td class="editable">
+					<span></span>
+					<input type="text" name="data[item]" />
+				</td>
+				<td class="editable">
+					<span></span>
+					<input type="text" name="data[description]" />
+				</td>
+				<td class="editable">
+					<span></span>
+					<input type="text" name="data[price]" />
+				</td>
+				<td class="editable">
+					<span></span>
+					<input type="text" name="data[quantity]" />
+				</td>
+				<td class="delete">
+					<input type="checkbox" name="delete[]" value="" id="deleteNULL_STRING" />
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="submit">
+		<input type="hidden" name="insert" value="true" />
+		<input type="hidden" name="table" value="tgTable" />
+		<input type="submit" value="Update" />
+	</div>
+</form>
+</script>
+</body>
+</html>
